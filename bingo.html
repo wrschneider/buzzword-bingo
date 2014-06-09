@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Buzzword Bingo Generator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	#output table {
+		width: 700px; 
+		height: 300px;
+		margin-top: 10px;
+		page-break-inside: avoid !important;
+		font-size: 16pt;
+	}
+	
+	</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div>
+        <h3>Buzzword Bingo Generator</h3>
+		
+		<form role="form" style="width: 30%">
+		<div class="form-group">
+			<label>Enter a series of buzzwords separated by newlines (for best results include at least 24)</label>
+			<textarea class="form-control" name="words" rows="10"></textarea>
+		</div>
+		<div class="form-group">
+			<label>Number of cards to generate</label>
+			<input class="form-control" name="count" type="text">
+		</div>	
+		<button type="button" id="generate" class="btn btn-primary">Generate!</button>
+		</form>
+	  </div>
+	  
+	  <div id="output"></div>
+	  
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	<script src="./bingo.js"></script>
+  </body>
+</html>
