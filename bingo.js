@@ -13,9 +13,10 @@ $(document).ready(function() {
 		
 		for (i = 0; i < num; i++) {
 			randomizedWords = randomizeCardWords(words);
-			console.debug(randomizedWords);
 			$("#output").append(generateOneCard(randomizedWords));
 		}
+
+		$("#print").removeClass("disabled");
 		return false;
 	};
 	
@@ -60,5 +61,6 @@ $(document).ready(function() {
 	};
 	
 	$("#generate").click(generateCards);
+	$("#print").click(function() {window.print(); });
 
 });

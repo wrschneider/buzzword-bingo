@@ -22,12 +22,24 @@
 	<style>
 	#output table {
 		width: 700px; 
-		height: 300px;
+		height: 600px;
 		margin-top: 10px;
 		page-break-inside: avoid !important;
+		page-break-after: always;
 		font-size: 16pt;
 	}
-	
+
+	#output table th {
+	  width: 20%;
+	}
+
+	@media print {
+	  @page {size: landscape}	
+	  #setupForm {
+	    display: none !important;
+
+	  }
+ 	}	
 	</style>
   </head>
 
@@ -35,7 +47,7 @@
 
     <div class="container">
 
-      <div>
+      <div id="setupForm">
         <h3>Buzzword Bingo Generator</h3>
 		
 		<form role="form" style="width: 30%">
@@ -48,10 +60,11 @@
 			<input class="form-control" name="count" type="text">
 		</div>	
 		<button type="button" id="generate" class="btn btn-primary">Generate!</button>
+		<button type="button" id="print" class="btn btn-primary disabled">Print</button>
 		</form>
 	  </div>
 	  
-	  <div id="output"></div>
+      <div id="output"></div>
 	  
     </div><!-- /.container -->
 
